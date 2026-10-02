@@ -24,7 +24,7 @@ def generate_info_card(output_path="info-card.svg"):
     <text x="110" y="45" class="val line" style="animation-delay: 0.4s;">Arch Linux / Windows</text>
     
     <text x="0" y="70" class="key line" style="animation-delay: 0.5s;">Host:</text>
-    <text x="110" y="70" class="val line" style="animation-delay: 0.5s;">Full-Stack Developer</text>
+    <text x="110" y="70" class="val line" style="animation-delay: 0.5s;">AI engineer and developer</text>
     
     <text x="0" y="95" class="key line" style="animation-delay: 0.6s;">Stack:</text>
     <text x="110" y="95" class="val line" style="animation-delay: 0.6s;">Python, JavaScript, Git</text>
