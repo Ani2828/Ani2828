@@ -1,0 +1,60 @@
+def generate_info_card(output_path="info-card.svg"):
+    svg_content = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 350" width="100%" height="100%">
+  <style>
+    .bg {{ fill: #0d1117; }}
+    .title {{ font-family: "Courier New", monospace; font-weight: bold; fill: #58a6ff; font-size: 14px; }}
+    .key {{ font-family: "Courier New", monospace; font-weight: bold; fill: #7ee787; font-size: 13px; }}
+    .val {{ font-family: "Courier New", monospace; fill: #c9d1d9; font-size: 13px; }}
+    .line {{ opacity: 0; animation: fadeIn 0.5s ease-out forwards; }}
+    @keyframes fadeIn {{ to {{ opacity: 1; transform: translateY(0); }} }}
+  </style>
+  
+  <rect width="490" height="350" class="bg" rx="6" stroke="#30363d" stroke-width="1"/>
+  
+  <!-- Window Header Dots -->
+  <circle cx="20" cy="20" r="6" fill="#ff5f56"/>
+  <circle cx="40" cy="20" r="6" fill="#ffbd2e"/>
+  <circle cx="60" cy="20" r="6" fill="#27c93f"/>
+  
+  <g transform="translate(25, 55)">
+    <text x="0" y="0" class="title line" style="animation-delay: 0.2s;">developer@github-profile</text>
+    <text x="0" y="20" class="val line" style="animation-delay: 0.3s;">----------------------------------</text>
+    
+    <text x="0" y="45" class="key line" style="animation-delay: 0.4s;">OS:</text>
+    <text x="110" y="45" class="val line" style="animation-delay: 0.4s;">Arch Linux / Windows</text>
+    
+    <text x="0" y="70" class="key line" style="animation-delay: 0.5s;">Host:</text>
+    <text x="110" y="70" class="val line" style="animation-delay: 0.5s;">Full-Stack Developer</text>
+    
+    <text x="0" y="95" class="key line" style="animation-delay: 0.6s;">Stack:</text>
+    <text x="110" y="95" class="val line" style="animation-delay: 0.6s;">Python, JavaScript, Git</text>
+    
+    <text x="0" y="120" class="key line" style="animation-delay: 0.7s;">Focus:</text>
+    <text x="110" y="120" class="val line" style="animation-delay: 0.7s;">Automation &amp; Tooling</text>
+    
+    <text x="0" y="145" class="key line" style="animation-delay: 0.8s;">Shell:</text>
+    <text x="110" y="145" class="val line" style="animation-delay: 0.8s;">PowerShell / Bash</text>
+    
+    <text x="0" y="175" class="key line" style="animation-delay: 0.9s;">Highlights:</text>
+    <text x="110" y="175" class="val line" style="animation-delay: 0.9s;">Custom SVG animations</text>
+    <text x="110" y="195" class="val line" style="animation-delay: 1.0s;">Open-source enthusiast</text>
+    
+    <!-- Color Palette Blocks -->
+    <g transform="translate(0, 230)" class="line" style="animation-delay: 1.1s;">
+      <rect x="0" y="0" width="20" height="15" fill="#0d1117" rx="3"/>
+      <rect x="25" y="0" width="20" height="15" fill="#ff7b72" rx="3"/>
+      <rect x="50" y="0" width="20" height="15" fill="#3fb950" rx="3"/>
+      <rect x="75" y="0" width="20" height="15" fill="#d29922" rx="3"/>
+      <rect x="100" y="0" width="20" height="15" fill="#58a6ff" rx="3"/>
+      <rect x="125" y="0" width="20" height="15" fill="#bc8cff" rx="3"/>
+      <rect x="150" y="0" width="20" height="15" fill="#39d353" rx="3"/>
+    </g>
+  </g>
+</svg>'''
+
+    with open(output_path, "w", encoding="utf-8") as f:
+        f.write(svg_content)
+    print(f"Generated info card SVG at {output_path}")
+
+if __name__ == "__main__":
+    generate_info_card()
